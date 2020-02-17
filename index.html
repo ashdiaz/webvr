@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!--
+  Seahorse
+   visit: https://poly.google.com/view/d_36p3CahYa
+  Angler Fish
+   visit: https://poly.google.com/view/85n5_RiSeSf
+   Nightmare Fish:
+    visit: https://poly.google.com/view/df0KaOqgFFr
+  Fish:
+    visit:https://poly.google.com/view/52s3JpUSjmX
+ -->
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+          <img id="sea" src="images/sea.jpg">
+          <a-asset-item id="shark-gltf" src="models/gltf/shark/shark.gltf"></a-asset-item>
+          <a-asset-item id="seahorse-gltf" src="models/gltf/seahorse/seahorse.gltf"></a-asset-item>
+          <a-asset-item id="angler-fish-gltf" src="models/gltf/angler-fish/model.gltf"></a-asset-item>
+          <a-asset-item id="nightmare-fish-gltf" src="models/gltf/nightmare-fish/model.gltf"></a-asset-item>
+          <a-asset-item id="turtle-gltf" src="models/gltf/turtle/turtle.gltf"></a-asset-item>
+          <a-asset-item id="fish-gltf" src="models/gltf/fish/Goldfish_01.gltf"></a-asset-item>
+
+        </a-assets>
+        <a-sky src="#sea"></a-sky>
+        <a-entity  gltf-model="#shark" ...
+          sound="src: url(sound/ocean.mp3); autoplay: true; loop:true; volume: 0.2;"></a-entity>
+
+
+        <a-entity id="shark"
+          position="-0.19 3.024 12.42"
+          gltf-model="#shark-gltf"
+          rotation= "0 180 0"
+          scale= "0.7 0.7 0.7"
+          animation="property: position;
+                     to: -1 1.0 -0.1;
+                     dur: 3950;
+                     easing: linear;
+                     loop: true;"></a-entity>
+        <a-entity id= "bubbles"
+          geometry="primitive: sphere;"
+          material="color: #1796c6;"
+          position= "0 1.3 -1.5"
+          scale= "0.1 0.1 0.1"
+          animation="property: position;
+                      to: -0.5 4.5 -2.5;
+                      dur: 1450;
+                      easing: linear;
+                      loop: true;"></a-entity>
+        <a-entity id= "bubbles2"
+          geometry="primitive: sphere;"
+          material="color: #1796c6;"
+          position= "1.0 0.7 -1.5"
+          scale= "0.1 0.1 0.1"
+          animation="property: position;
+                      to: -0.5 4.5 -2.5;
+                      dur: 2450;
+                      easing: linear;
+                      loop: true;"></a-entity>
+        <a-entity id= "bubbles3"
+          geometry="primitive: sphere;"
+          material="color: #1796c6;"
+          position= "7.0 0.7 -1.5"
+          scale= "0.1 0.1 0.1"
+          animation="property: position;
+                    to: 5.5 4.5 -2.5;
+                    dur: 2450;
+                    easing: linear;
+                    loop: true;"></a-entity>
+        <a-entity id= "bubbles4"
+          geometry="primitive: sphere;"
+          material="color: #1796c6;"
+          position= "-7.0 0.7 -1.5"
+          scale= "0.1 0.1 0.1"
+          animation="property: position;
+                      to: -1.5 4.5 -2.5;
+                      dur: 2450;
+                      easing: linear;
+                      loop: true;"></a-entity>
+        <a-entity id="seahorse"
+          position="-1.5 2.024 -7.42"
+          rotation= "0 55 50"
+          gltf-model="#seahorse-gltf"
+          scale= "0.1 0.1 0.1"
+          animation="property: position;
+                      to: 2.5 2.2 -1.2;
+                      dur: 8450;
+                      easing: linear;
+                      loop: true;"></a-entity>
+        <a-entity id="angler-fish"
+          position="0.5 -3.2 2.2"
+          rotation= "10 250 0"
+          gltf-model="#angler-fish-gltf"
+          scale= "0.5 0.5 0.5"
+          animation="property: rotation;
+                      to:0 300 0;
+                      dur: 5070;
+                      elasticity: 500;
+                      easing: linear;
+                      loop: true;"></a-entity
+        <a-entity id="nightmare-fish"
+          position="4.5 1.2 -2.0"
+          gltf-model="#nightmare-fish-gltf"
+          scale= "0.5 0.5 0.5"
+          animation="property: position;
+                      to:-3.5 1.024 -2.0;
+                      dur: 4070;
+                      elasticity: 500;
+                      easing: easeInOutSine;
+                      loop: true"></a-entity>
+          <a-entity id="turtle"
+            position="3.4 0.2 4.0"
+            gltf-model="#turtle-gltf"
+            scale= "0.05 0.05 0.05"
+            rotation= "295 270 0"
+            animation="property: position;
+                        to:2.0 6.024 4.0;
+                        dur: 7070;
+                        easing: easeInOutSine;
+                        loop: true"></a-entity>
+          <a-entity id="fish"
+              position="-11.2 3.2 -12.0"
+              gltf-model="#fish-gltf"
+              scale= "0.05 0.05 0.05"
+              rotation= "0 90 0"
+              animation="property: position;
+                          to:11.8 2.024 -11.0;
+                          dur: 7070;
+                          easing: linear;
+                          loop: true"></a-entity>
+          <a-entity id="fish2"
+            position="-11.6 3.7 -12.0"
+            gltf-model="#fish-gltf"
+            scale= "0.05 0.05 0.05"
+            rotation= "0 90 0"
+            animation="property: position;
+                        to:11.10 2.24 -11.0;
+                        dur: 7010;
+                        easing: linear;
+                        loop: true"></a-entity>
+          <a-entity id="fish3"
+            position="-11.8 3.4 -12.0"
+            gltf-model="#fish-gltf"
+            scale= "0.07 0.07 0.07"
+            rotation= "0 110 0"
+            animation="property: position;
+                        to:11.10 2.24 -11.0;
+                        dur: 7010;
+                        easing: linear;
+                        loop: true"></a-entity>
+          <a-entity id="fish4"
+            position="-11.6 3.0 -12.0"
+            gltf-model="#fish-gltf"
+            scale= "0.03 0.03 0.03"
+            rotation= "0 80 0"
+            animation="property: position;
+                        to:11.10 2.24 -11.0;
+                        dur: 7010;
+                        easing: linear;
+                        loop: true"></a-entity>
+    </a-scene>
+
+
+  </body>
+</html>
